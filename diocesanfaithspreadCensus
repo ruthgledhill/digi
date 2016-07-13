@@ -1,0 +1,74 @@
+<html>
+  <head>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+  <script>
+    google.charts.load('current', { 'packages': ['map'] });
+    google.charts.setOnLoadCallback(drawMap);
+
+    function drawMap() {
+      var data = google.visualization.arrayToDataTable([
+['Wells, United Kingdom','Bath and Wells: Christian: 573707,Buddhist: 2881,Hindu: 1011,Jewish: 678,Muslim: 2733,Sikh: 266,Other: 5559,None: 246875,Not Given: 73289'],
+['Birmingham, United Kingdom','Birmingham: Christian: 772256,Buddhist: 8409,Hindu: 38286,Jewish: 2811,Muslim: 200817,Sikh: 48180,Other: 7559,None: 324113,Not Given: 97170'],
+['Blackburn','Blackburn: Christian: 893364,Buddhist: 3189,Hindu: 4940,Jewish: 1068,Muslim: 82352,Sikh: 1182,Other: 4174,None: 243220,Not Given: 80411'],
+['Wells, United Kingdom','Bath and Wells: Christian: 573707,Buddhist: 2881,Hindu: 1011,Jewish: 678,Muslim: 2733,Sikh: 266,Other: 5559,None: 246875,Not Given: 73289'],
+['Bradford','Bradford: Christian: 387231,Buddhist: 1798,Hindu: 7084,Jewish: 379,Muslim: 93236,Sikh: 4432,Other: 2435,None: 154950,Not Given: 45754'],
+['Bristol','Bristol: Christian: 540775,Buddhist: 4564,Hindu: 6519,Jewish: 1107,Muslim: 22630,Sikh: 3216,Other: 4857,None: 310830,Not Given: 73703'],
+['Canterbury','Canterbury: Christian: 576549,Buddhist: 4277,Hindu: 5902,Jewish: 1100,Muslim: 6903,Sikh: 774,Other: 4075,None: 242607,Not Given: 68614'],
+['Carlisle, United Kingdom','Carlisle: Christian: 357235,Buddhist: 1383,Hindu: 472,Jewish: 229,Muslim: 1219,Sikh: 61,Other: 1470,None: 100615,Not Given: 35317'],
+['Chelmsford','Chelmsford: Christian: 1777544,Buddhist: 12369,Hindu: 44559,Jewish: 17746,Muslim: 133534,Sikh: 17842,Other: 11222,None: 764067,Not Given: 212415'],
+['Chester','Chester: Christian: 1097156,Buddhist: 4095,Hindu: 6071,Jewish: 4108,Muslim: 19191,Sikh: 1338,Other: 4553,None: 361108,Not Given: 104580'],
+['Chichester','Chichester: Christian: 983399,Buddhist: 6844,Hindu: 7233,Jewish: 4032,Muslim: 15200,Sikh: 1068,Other: 9309,None: 450296,Not Given: 128618'],
+['Coventry','Coventry: Christian: 503965,Buddhist: 3041,Hindu: 15296,Jewish: 863,Muslim: 25773,Sikh: 18312,Other: 3828,None: 195214,Not Given: 54208'],
+['Derby','Derby: Christian: 643960,Buddhist: 2438,Hindu: 2764,Jewish: 537,Muslim: 14668,Sikh: 8156,Other: 3904,None: 278090,Not Given: 71483'],
+['Durham, United Kingdom','Durham: Christian: 1039053,Buddhist: 2813,Hindu: 2370,Jewish: 3037,Muslim: 11283,Sikh: 2507,Other: 3893,None: 314023,Not Given: 86922'],
+['Ely','Ely: Christian: 433981,Buddhist: 3362,Hindu: 4325,Jewish: 1707,Muslim: 9289,Sikh: 1087,Other: 3026,None: 216002,Not Given: 56922'],
+['Exeter','Exeter: Christian: 704192,Buddhist: 3724,Hindu: 1080,Jewish: 960,Muslim: 3629,Sikh: 247,Other: 6355,None: 318748,Not Given: 93765'],
+['Gloucester','Gloucester: Christian: 411474,Buddhist: 1729,Hindu: 1759,Jewish: 605,Muslim: 4011,Sikh: 445,Other: 2967,None: 163938,Not Given: 47572'],
+['Guildford','Guildford: Christian: 638504,Buddhist: 6700,Hindu: 11788,Jewish: 2665,Muslim: 18695,Sikh: 2300,Other: 3865,None: 252814,Not Given: 75670'],
+['Hereford','Hereford: Christian: 212367,Buddhist: 971,Hindu: 279,Jewish: 191,Muslim: 703,Sikh: 248,Other: 1533,None: 72812,Not Given: 25795'],
+['Leicester','Leicester: Christian: 541984,Buddhist: 5337,Hindu: 36046,Jewish: 753,Muslim: 42172,Sikh: 14177,Other: 4984,None: 275767,Not Given: 62481'],
+['Lichfield','Lichfield: Christian: 1383108,Buddhist: 4977,Hindu: 16333,Jewish: 757,Muslim: 48615,Sikh: 36354,Other: 9121,None: 449240,Not Given: 136196'],
+['Lincoln, United Kingdom','Lincoln: Christian: 715171,Buddhist: 1908,Hindu: 1934,Jewish: 542,Muslim: 4654,Sikh: 905,Other: 3621,None: 236324,Not Given: 73941'],
+['Liverpool','Liverpool: Christian: 1175439,Buddhist: 4124,Hindu: 5254,Jewish: 2690,Muslim: 22100,Sikh: 1166,Other: 3418,None: 254417,Not Given: 92391'],
+['London','London: Christian: 1779340,Buddhist: 47171,Hindu: 184037,Jewish: 132403,Muslim: 512119,Sikh: 54954,Other: 26871,None: 847318,Not Given: 404888'],
+['Manchester','Manchester: Christian: 1220637,Buddhist: 8892,Hindu: 19828,Jewish: 22665,Muslim: 203115,Sikh: 4730,Other: 6200,None: 453563,Not Given: 127371'],
+['Newcastle','Newcastle: Christian: 508496,Buddhist: 4681,Hindu: 3480,Jewish: 1470,Muslim: 18644,Sikh: 1564,Other: 2390,None: 205242,Not Given: 53133'],
+['Norwich','Norwich: Christian: 545246,Buddhist: 2684,Hindu: 1694,Jewish: 937,Muslim: 3592,Sikh: 381,Other: 4015,None: 246372,Not Given: 66379'],
+['Oxford','Oxford: Christian: 1387575,Buddhist: 10058,Hindu: 22644,Jewish: 5450,Muslim: 62108,Sikh: 14488,Other: 8634,None: 591549,Not Given: 163295'],
+['Peterborough','Peterborough: Christian: 528930,Buddhist: 2347,Hindu: 7252,Jewish: 831,Muslim: 15891,Sikh: 2633,Other: 3160,None: 235462,Not Given: 58094'],
+['Portsmouth','Portsmouth: Christian: 457903,Buddhist: 2840,Hindu: 2599,Jewish: 821,Muslim: 13743,Sikh: 829,Other: 4006,None: 220937,Not Given: 56722'],
+['Ripon','Ripon & Leeds: Christian: 515824,Buddhist: 3065,Hindu: 5306,Jewish: 4728,Muslim: 25530,Sikh: 4660,Other: 2511,None: 201237,Not Given: 56239'],
+['Rochester, United Kingdom','Rochester: Christian: 796552,Buddhist: 5049,Hindu: 11767,Jewish: 1966,Muslim: 19089,Sikh: 13548,Other: 5010,None: 336577,Not Given: 92942'],
+['Salisbury','Salisbury: Christian: 597838,Buddhist: 3066,Hindu: 1969,Jewish: 985,Muslim: 3470,Sikh: 314,Other: 4932,None: 232452,Not Given: 72873'],
+['Sheffield','Sheffield: Christian: 737519,Buddhist: 4657,Hindu: 7519,Jewish: 844,Muslim: 49969,Sikh: 2657,Other: 4731,None: 346657,Not Given: 82447'],
+['Southwark','Southwark: Christian: 1469255,Buddhist: 27023,Hindu: 73501,Jewish: 9254,Muslim: 168059,Sikh: 9948,Other: 12427,None: 689847,Not Given: 215087'],
+['Southwell','Southwell and Nottingham: Christian: 640754,Buddhist: 3341,Hindu: 6753,Jewish: 1579,Muslim: 24638,Sikh: 6310,Other: 3995,None: 329405,Not Given: 77525'],
+['St Albans','St Albans: Christian: 1064160,Buddhist: 8308,Hindu: 27689,Jewish: 19975,Muslim: 57753,Sikh: 9329,Other: 8119,None: 477544,Not Given: 128723'],
+['Bury St Edmunds','St Edmundsbury & Ipswich: Christian: 408238,Buddhist: 1646,Hindu: 1192,Jewish: 782,Muslim: 2350,Sikh: 285,Other: 2653,None: 184248,Not Given: 49406'],
+['Truro','Truro: Christian: 321614,Buddhist: 1679,Hindu: 525,Jewish: 401,Muslim: 841,Sikh: 97,Other: 3630,None: 160797,Not Given: 45617'],
+['Wakefield','Wakefield: Christian: 675334,Buddhist: 2588,Hindu: 3884,Jewish: 637,Muslim: 81493,Sikh: 4523,Other: 4713,None: 295073,Not Given: 76055'],
+['Winchester','Winchester: Christian: 744649,Buddhist: 4501,Hindu: 5322,Jewish: 1966,Muslim: 10297,Sikh: 3007,Other: 5204,None: 313262,Not Given: 86893'],
+['Worcester, United Kingdom','Worcester: Christian: 582445,Buddhist: 1855,Hindu: 2140,Jewish: 446,Muslim: 14034,Sikh: 3482,Other: 3207,None: 194912,Not Given: 58279'],
+['York, United Kingdom','York: Christian: 959757,Buddhist: 3499,Hindu: 2482,Jewish: 927,Muslim: 10638,Sikh: 1062,Other: 4165,None: 328623,Not Given: 100746']
+
+
+
+
+
+
+
+      ]);
+
+    var options = { showTip: true };
+
+    var map = new google.visualization.Map(document.getElementById('chart_div'));
+
+    map.draw(data, options);
+  };
+  </script>
+  </head>
+  <body>
+    <div id="chart_div"></div>
+  </body>
+</html>
