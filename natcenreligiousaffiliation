@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the corechart package.
+      google.charts.load('current', {'packages':['corechart']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.charts.setOnLoadCallback(drawChart);
+
+
+      function drawChart() {
+
+        // Create the data table.
+        var data = new google.visualization.DataTable();
+data.addColumn('string', 'Year');
+data.addColumn('number', 'C of E');
+
+data.addRows([
+['1983',25.5],
+['1984',26.9],
+['1985',24],
+['1986',21.6],
+['1987',23.1],
+['1989',26.8],
+['1990',24.6],
+['1991',22.1],
+['1993',19.3],
+['1994',19.6],
+['1995',18.4],
+['1996',17],
+['1997',12],
+['1998',12.3],
+['1999',12.6],
+['2000',15.2],
+['2001',12.9],
+['2002',13],
+['2003',12],
+['2004',12.4],
+['2005',11.2],
+['2006',7.2],
+['2007',6.3],
+['2008',8.9],
+['2009',7.2],
+['2010',6.1],
+['2011',4.9],
+['2012',6.9],
+['2013',3.8],
+['2014',5],
+
+
+
+ ]);
+
+        var options = {'title':'Percentage of those aged 17-34 affiliated to the Church of England, source NatCen',
+                       'width':1200,
+                       'height':600};
+
+        // Instantiate and draw our chart, passing in some options.
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+
+  <body>
+    <!--Div that will hold the pie chart-->
+    <div id="chart_div"></div>
+  </body>
+</html>
